@@ -13,6 +13,7 @@ Akibat dari kejadian ini karena stock minus, akibatnya transaksi tidak bisa dila
 ## Situasi yang terjadi
 
 Situasi ini terjadi karena ada lonjakan transaksi yang mendadak dalam suatu waktu tertentu.
+Ketidaksiapan system dalam menghadapi situasi ini menyebabkan seolah-olah stock kosong atau bahkan minus.
 
 ## Pendekatan Solusi 
 
