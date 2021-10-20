@@ -1,0 +1,46 @@
+node_modules
+.DS_Store
+.nyc_output
+node_modules
+dist
+temp
+
+# local env files
+envs
+.env
+.env.*
+.npmrc
+.deploy
+debug.log
+env.*
+
+# serverless file
+.serverless
+# serverless.yml
+# lambda.js
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+
+# Editor directories and files
+.idea
+.vscode
+.configs
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+#lock
+package-lock.json
+yarn.lock
+
+#log
+firebase-debug.log
+firebase.json
+credentials.json
+token.json
