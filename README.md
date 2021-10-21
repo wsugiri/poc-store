@@ -59,4 +59,4 @@ untuk menjalankan aplikasi di local:
 
 ## Simulasi Treasure Hunt
 
-Simulasi treasure hunt bisa ditemuukan di [<a href="tests/treasure.html" download>File Treasure Hunt</a>](https://www.google.com/)
+Simulasi treasure hunt bisa ditemuukan di file ```tests/treasure.html```
