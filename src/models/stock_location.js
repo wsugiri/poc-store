@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const { db } = require('../../utils');
+const { db } = require('../utils');
 
 const Model = db.define('master_item_uom', {
     item_code: DataTypes.STRING(50),

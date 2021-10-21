@@ -36,9 +36,9 @@ Berikut desain sederhana database terkait:
  - GET {base-url}/catalogs?page=1&limit=10&sortBy=sales&sortDir=desc
  - GET {base-url}/catalogs?category=electronic
  - GET {base-url}/catalogs?search=mouse
- - POST {base-url}/chart
- - PUT {base-url}/chart/:sku/:qty
- - GET {base-url}/chart
+ - POST {base-url}/orders
+ - GET {base-url}/orders/:id
+ - PUT {base-url}/orders/:id
  - POST {base-url}/checkout
  - POST {base-url}/payment
 

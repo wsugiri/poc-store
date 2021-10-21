@@ -26,6 +26,22 @@ exports.catalogList = async (event) => {
         }
     }
 
+    if (payload.search) {
+        where.item_description = {
+            [Op.like]: `%${payload.search}%`,
+        }
+    }
+
+    if (payload.category) {
+        where.category = {
+            [Op.in]: payload.category.split(','),
+        }
+    }
+
+    if (payload.sortBy) {
+        order.push([payload.sortBy, payload.sortDir || 'asc']);
+    }
+
     try {
         const data = await MasterItem.findAndCountAll({
             where,
