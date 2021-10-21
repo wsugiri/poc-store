@@ -12,7 +12,6 @@ envs
 .npmrc
 .deploy
 debug.log
-env.*
 
 # serverless file
 .serverless

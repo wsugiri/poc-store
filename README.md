@@ -46,6 +46,7 @@ untuk di local, {base-url} bisa diganti http://localhost:9000
 
 ## Menjalankan aplikasi
 
-untuk menjalankan aplikasi, ketik
+untuk menjalankan aplikasi di local:
 
-``` npm start ```
+ - copy env.example into .env
+ - npm start 
