@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+
+    </pre>
+    <script>
+        let way = [
+            [1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 0, 0, 0, 0, 0, 0, 1],
+            [1, 0, 1, 1, 1, 0, 0, 1],
+            [1, 0, 0, 0, 1, 0, 1, 1],
+            [1, 0, 1, 0, 0, 0, 0, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1],
+        ];
+        let pos = [0, 0];
+
+        const drawBlock = (way) => {
+            let html = '';
+            way.forEach((m, row) => {
+                m.forEach((n, col) => {
+                    if ((way.length - pos[0] - 2) === row && pos[1] + 1 === col) {
+                        html += 'X';
+                    } else {
+                        html += n ? '#' : '.';
+                    }
+                });
+                html += '\n';
+            });
+            document.querySelector('pre').innerHTML = html;
+        }
+
+        const validatePos = (newPos) => {
+            const row = way.length - newPos[0] - 2;
+            const col = newPos[1] + 1;
+            return way[row][col] === 0 ? true : false;
+        }
+
+        document.addEventListener('keydown', e => {
+            let newPost = [...pos];
+            if (e.key === 'ArrowUp') {
+                newPost = [pos[0] + 1, pos[1]];
+            }
+            if (e.key === 'ArrowDown') {
+                newPost = [pos[0] - 1, pos[1]];
+            }
+            if (e.key === 'ArrowLeft') {
+                newPost = [pos[0], pos[1] - 1];
+            }
+            if (e.key === 'ArrowRight') {
+                newPost = [pos[0], pos[1] + 1];
+            }
+
+            if (validatePos(newPost)) {
+                pos = newPost;
+                drawBlock(way);
+            }
+        });
+
+        drawBlock(way);
+    </script>
+</body>
+
+</html>
