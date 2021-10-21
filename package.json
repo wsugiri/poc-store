@@ -25,6 +25,7 @@
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5",
     "serverless-http": "^2.6.0",
+    "sqlite3": "^5.0.2",
     "uuidv4": "^6.2.3"
   },
   "devDependencies": {

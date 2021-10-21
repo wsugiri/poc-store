@@ -4,6 +4,10 @@ const http = require('http');
 const cors = require('cors');
 const app = express();
 
+if (process.env.CREATE_SAMPLE_DATA) {
+    require('./tests/migration');
+}
+
 const route = require('./src/routes');
 
 app.use(express.json());
@@ -47,4 +51,4 @@ const onListening = () => {
 
 server.on('error', onError);
 server.on('listening', onListening);
-server.listen(process.env.APP_PORT || 9001);
+server.listen(process.env.APP_PORT || 9000);
