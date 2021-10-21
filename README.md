@@ -37,12 +37,18 @@ Berikut desain sederhana database terkait:
  - GET {base-url}/catalogs?category=electronic
  - GET {base-url}/catalogs?search=mouse
  - POST {base-url}/orders
+ - GET {base-url}/orders
  - GET {base-url}/orders/:id
  - PUT {base-url}/orders/:id
- - POST {base-url}/checkout
- - POST {base-url}/payment
+ - POST {base-url}/orders-item
+ - PUT {base-url}/orders-item/:id
+ - DELETE {base-url}/orders-item/:id
 
-untuk di local, {base-url} bisa diganti http://localhost:9000 
+Untuk di local, {base-url} bisa diganti http://localhost:9000.
+ 
+List collection postman bisa di download di
+[<a href="docs/poc-order.postman_collection.json" download>Click to Download</a>](https://www.google.com/)
+
 
 ## Menjalankan aplikasi
 

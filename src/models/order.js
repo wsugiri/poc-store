@@ -21,4 +21,3 @@ const OrderDetail = require('./order_detail');
 const Order = Model;
 Order.hasMany(OrderDetail, { as: 'items', foreignKey: 'order_id', sourceKey: 'id' });
 
-// Menu.hasMany(Menu, { as: 'menus', foreignKey: 'parent', sourceKey: 'code' });

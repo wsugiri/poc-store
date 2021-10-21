@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "93196e73-5cc5-4de4-9ad9-11dc90b9ea50",
+		"name": "poc-order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list catalog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/catalogs?limit=10&page=1&sortBy=item_code&sortDir=desc",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"catalogs"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						},
+						{
+							"key": "item_description",
+							"value": "lele",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "item_code"
+						},
+						{
+							"key": "sortDir",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list catalog by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/catalogs?category=pakan",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"catalogs"
+					],
+					"query": [
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "pakan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list catalog by search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/catalogs?search=pakan",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"catalogs"
+					],
+					"query": [
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						},
+						{
+							"key": "search",
+							"value": "pakan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cust_code\": \"CUST_003\",\r\n    \"notes\": \"Order 3 Kali\",\r\n    \"items\": [\r\n        { \"item_code\": \"IK001\", \"item_qty\": 8  },\r\n        { \"item_code\": \"IK002\", \"item_qty\": 2, \"item_uom\": \"kwintal\"  },\r\n        { \"item_code\": \"IK003\", \"item_qty\": 5 }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/orders?limit=10&page=1&status=1",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/orders/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"orders",
+						"2"
+					],
+					"query": [
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_no\": \"ORDER-001\",\r\n    \"status\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/orders/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"orders",
+						"2"
+					],
+					"query": [
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add order item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\": 1,\r\n    \"item_code\": \"IT001\",\r\n    \"item_qty\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/orders-item",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"orders-item"
+					],
+					"query": [
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete order item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/orders-item/3",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"orders-item",
+						"3"
+					],
+					"query": [
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update order item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item_qty\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/orders-item/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"orders-item",
+						"2"
+					],
+					"query": [
+						{
+							"key": "item_code",
+							"value": "IT002",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
