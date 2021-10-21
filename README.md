@@ -25,6 +25,10 @@ Ada beberapa pendekatan yang bisa dilakukan
  - Peningkatan bandwith ataupun dengan menggunakan load balancer sehingga peningkatan traffic tidak menyebabkan server down.
  - Menggunakan layanan yang bisa mengotomatis bisa menghandle traffic.
 
+## Desain Database
+
+Berikut desain sederhana database terkait:
+[<img alt="alt_text" src="docs/images/design_db.png" />](https://www.google.com/)
 
 
 ## Api yang digunakan
