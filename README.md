@@ -56,3 +56,7 @@ untuk menjalankan aplikasi di local:
 
  - copy env.example into .env
  - npm start 
+
+## Simulasi Treasure Hunt
+
+Simulasi treasure hunt bisa ditemuukan di [<a href="tests/treasure.html" download>File Treasure Hunt</a>](https://www.google.com/)
