@@ -1,6 +1,6 @@
 # Background 
 
-Situasi yang terjadi dikarenakan ada hot sale di event tertentu menyebabkan ada lonjakan transaksi.
+Situasi yang terjadi dikarenakan ada hot sale di event tertentu menyebabkan ada lonjakan transaksi. 
 
 Efek lanjut dari lonjakan transaksi tersebut menyebabkan banyak terjadinya request stock bersamaan, sehinggal seolah-olah tidak ada stock yang available atau stocknya minus.
 
@@ -13,7 +13,7 @@ Akibat dari kejadian ini karena stock minus, akibatnya transaksi tidak bisa dila
 ## Situasi yang terjadi
 
 Situasi ini terjadi karena ada lonjakan transaksi yang mendadak dalam suatu waktu tertentu.
-Ketidaksiapan system dalam menghadapi situasi ini menyebabkan seolah-olah stock kosong atau bahkan minus.
+Ketidaksiapan system dalam menghadapi situasi ini menyebabkan seolah-olah stock kosong atau bahkan minus yang ada kemungkinan disebabkan oleh reservasi stock yang datang bersamaan dan kurang ditangani dengan baik oleh system.
 
 ## Pendekatan Solusi 
 
@@ -38,4 +38,10 @@ Ada beberapa pendekatan yang bisa dilakukan
  - POST {base-url}/checkout
  - POST {base-url}/payment
 
+untuk di local, {base-url} bisa diganti http://localhost:9000 
 
+## Menjalankan aplikasi
+
+untuk menjalankan aplikasi, ketik
+
+``` npm start ```
