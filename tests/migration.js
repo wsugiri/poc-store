@@ -15,9 +15,18 @@ const initializeData = async () => {
         { item_code: 'IT001', item_description: 'Pakan Ikan Lele', base_uom: 'gram' },
         { item_code: 'IT002', item_description: 'Pakan Ikan Jamur', base_uom: 'gram' },
         { item_code: 'IT003', item_description: 'Pakan Ikan Organik', base_uom: 'gram' },
-        { item_code: 'IT004', item_description: 'Jala Ikan', base_uom: 'pcs' },
-        { item_code: 'IT005', item_description: 'Bibit Ikan', base_uom: 'gram' },
-        { item_code: 'IT006', item_description: 'Selang Air', base_uom: 'pcs' },
+        { item_code: 'IT004', item_description: 'Pakan Ikan Gurame', base_uom: 'gram' },
+
+        { item_code: 'BI001', item_description: 'Bibit Ikan Lele', base_uom: 'gram' },
+        { item_code: 'BI002', item_description: 'Bibit Ikan Mas', base_uom: 'gram' },
+        { item_code: 'BI003', item_description: 'Bibit Ikan Gurame', base_uom: 'gram' },
+
+        { item_code: 'IK001', item_description: 'Ikan Lele', base_uom: 'kg' },
+        { item_code: 'IK002', item_description: 'Ikan Lele Besar', base_uom: 'kg' },
+        { item_code: 'IK003', item_description: 'Ikan Mas', base_uom: 'kg' },
+        { item_code: 'IK004', item_description: 'Ikan Mas Besar', base_uom: 'kg' },
+        { item_code: 'IK005', item_description: 'Ikan Gurame', base_uom: 'kg' },
+        { item_code: 'IK006', item_description: 'Ikan Gurame Besar', base_uom: 'kg' },
     ]);
 }
 
